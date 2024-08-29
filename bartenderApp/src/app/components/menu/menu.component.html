@@ -1,0 +1,13 @@
+
+<h2>Cocktail Menu</h2>
+<ul>
+  <li *ngFor="let cocktail of menu">
+    <input 
+      type="radio" 
+      [value]="cocktail.name" 
+      [(ngModel)]="selectedCocktail"
+      id="{{cocktail.name}}">
+    <label for="{{cocktail.name}}">{{ cocktail.name }}</label>
+  </li>
+</ul>
+<button (click)="placeOrder()">Place Order</button>

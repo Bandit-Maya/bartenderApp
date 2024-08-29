@@ -1,0 +1,10 @@
+<div>
+    <h2>Order Queue</h2>
+    <ul>
+        <li *ngFor="let order of orders">
+            
+            <span>#{{order.id}}: {{order.cocktail}}</span>
+            <button (click)="completeOrder(order.id)">Click to complete!</button>
+        </li>
+    </ul>
+</div>
